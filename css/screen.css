@@ -32,15 +32,39 @@ div#header p.tagline {
 div#header ul.accessibility {
 }
 
-/* Content */
-div#content {
+/* Content --> Article */
+/* Significant changes from rpk in this section.
+
+Element/division hierarchy:
+
+  <article>
+    <div id="area">
+      <div id="topic">
+        <div id="topic-title">
+        <div id="abstract">
+        <div id="discussion">
+        <div id="take-away">
+
+*/
+
+div#area {
 }
 
-div#main {
+div#topic {
 }
 
-div#supporting {
+div#topic-title {
 }
+
+div#abstract {
+}
+
+div#discussion {
+}
+
+div#take-away {
+}
+
 
 /* Footer */
 div#footer {
@@ -70,50 +94,50 @@ ul#navigation li a:focus {
 }
 
 
-/*Content Typography: Headings*/
-div#content h2 {
+/*article Typography: Headings*/
+div#article h2 {
 }
-div#content h3 {
+div#article h3 {
 }
-div#content h4 {
+div#article h4 {
 }
-div#content h5 {
+div#article h5 {
 }
-div#content h6 {
-}
-
-/*Content Typography: Paragraphs*/
-div#content p {
+div#article h6 {
 }
 
-/*Content Typography: Unordered Lists*/
-div#content ul {
+/*article Typography: Paragraphs*/
+div#article p {
 }
-div#content ul li {
+
+/*article Typography: Unordered Lists*/
+div#article ul {
+}
+div#article ul li {
 }
 /*Nested*/
-div#content * li ul {
+div#article * li ul {
 }
-div#content * li ul li {
+div#article * li ul li {
 }
 
-/*Content Typography: Ordered Lists*/
-div#content ol {
+/*article Typography: Ordered Lists*/
+div#article ol {
 }
-div#content ol li {
+div#article ol li {
 }
 /*Nested*/
-div#content * li ol {
+div#article * li ol {
 }
-div#content * li ol li {
+div#article * li ol li {
 }
 
-/*Content Typography: Links*/
-div#content a {
+/*article Typography: Links*/
+div#article a {
 }
-div#content a:visited {
+div#article a:visited {
 }
-div#content a:hover,
-div#content a:focus {
+div#article a:hover,
+div#article a:focus {
 }
 
