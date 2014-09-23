@@ -1,11 +1,14 @@
 /* screen.css: Screen Styles */
+/* Significant changes from rpk by MJF */
 
 /* Base Styles */
 
 /* Bold on headings, b, and strong */
 h1,h2,h3,h4,h5,h6,b,strong { font-weight: bold; }
+
 /* Italic on i, em, and cite: */
 i,em,cite { font-style: italic; }
+
 /* Dotted border and help cursor to abbr and acronym: */
 abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 
@@ -14,46 +17,33 @@ abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 body {
 }
 
-/* Major Divisions */
+/* Element hierarchy:
 
-/* Page (Containing Div) */
-div#page {
-}
-
-/* Header */
-div#header {
-}
-div#header h1 {
-}
-div#header h1 a {
-}
-div#header p.tagline {
-}
-div#header ul.accessibility {
-}
-
-/* Content --> Article */
-/* Significant changes from rpk in this section.
-
-Element/division hierarchy:
-
-  <article>
-    <div id="area">
-      <div id="topic">
-        <div id="topic-title">
-        <div id="abstract">
-        <div id="discussion">
-        <div id="take-away">
-
+  <main>                    <-- "There can be only one."
+    <article id="area">
+     <section id="topic">
+       <div id="abstract">
+       <aside> or <div id="discussion">
+       <div id="take-away">
 */
 
-div#area {
+
+/* Main */
+
+main {
 }
 
-div#topic {
+/* Major Divisions */
+
+/* Article ("Area") - contains elements "section" */
+
+article {
 }
 
-div#topic-title {
+
+/* Section ("topic") - contains div#abstract, div#discussion, div#take-away */
+
+section{
 }
 
 div#abstract {
@@ -66,78 +56,90 @@ div#take-away {
 }
 
 
+/* Header */
+header {
+}
+header h1 {
+}
+header h1 a {
+}
+header p.tagline {
+}
+header ul.accessibility {
+}
+
 /* Footer */
-div#footer {
+footer {
 }
-div#footer p.credits {
+footer p.credits {
 }
-div#footer ul.validators {
+footer ul.validators {
 }
-div#footer ul.validators li {
+footer ul.validators li {
 }
 
 /*Navigation*/
-ul#navigation {
+nav {
 }
 
-ul#navigation li {
+nav li {
 }
 
-ul#navigation li a {
+nav li a {
 }
 
-ul#navigation li a:visited {
+nav li a:visited {
 }
 
-ul#navigation li a:hover,
-ul#navigation li a:focus {
+nav li a:hover,
+nav li a:focus {
 }
 
 
 /*article Typography: Headings*/
-div#article h2 {
+article h2 {
 }
-div#article h3 {
+article h3 {
 }
-div#article h4 {
+article h4 {
 }
-div#article h5 {
+article h5 {
 }
-div#article h6 {
+article h6 {
 }
 
 /*article Typography: Paragraphs*/
-div#article p {
+article p {
 }
 
 /*article Typography: Unordered Lists*/
-div#article ul {
+article ul {
 }
-div#article ul li {
+article ul li {
 }
 /*Nested*/
-div#article * li ul {
+article * li ul {
 }
-div#article * li ul li {
+article * li ul li {
 }
 
 /*article Typography: Ordered Lists*/
-div#article ol {
+article ol {
 }
-div#article ol li {
+article ol li {
 }
 /*Nested*/
-div#article * li ol {
+article * li ol {
 }
-div#article * li ol li {
+article * li ol li {
 }
 
-/*article Typography: Links*/
-div#article a {
+/*main Typography: Links*/
+main a {
 }
-div#article a:visited {
+main a:visited {
 }
-div#article a:hover,
-div#article a:focus {
+main a:hover,
+main a:focus {
 }
 
