@@ -12,6 +12,13 @@ i,em,cite { font-style: italic; }
 /* Dotted border and help cursor to abbr and acronym: */
 abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 
+/* resets */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 /* Body */
 
 body {
@@ -39,16 +46,22 @@ main {
 /* Article ("Area") - contains elements "section" */
 
 article {
+break-after: auto
 }
 
-/* Section ("topic") - contains div#abstract, div#example, div#take-away */
+/* Section - contains div.topic, div.abstract, div.example, div.take-away */
+
+section {
+}
 
 section h1 {
+}
+
+div.topic {
   font-family: Verdana, "Liberation Sans", Geneva, sans-serif;
   font-size: 1.125em;
   line-height: 1.5em;
 }
-
 
 div.abstract {
 }
@@ -110,7 +123,6 @@ nav li a:focus {
 article h2 {
 font-size: 1.5em;
 line-height: 2em;
-
 }
 
 /*article Typography: Paragraphs*/
@@ -136,15 +148,6 @@ main a:visited {
 main a:hover,
 main a:focus {
 }
-
-
-/* resets */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 
 /* Responsive grid layout, using `box‐sizing:border‐box` */
 
