@@ -15,16 +15,20 @@ abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 /* Body */
 
 body {
+  font-family:  Helvetica, "Liberation Sans Narrow", Arial, sans-serif;
+  /* font-family: "Arial Narrow", Arial, sans-serif; */
+  font-size: 0.75em;
+  line-height: 1em;
 }
 
 /* Element hierarchy:
 
   <main>                    <-- "There can be only one."
-    <article id="area">
-     <section id="topic">
-       <div id="abstract">
-       <aside> or <div id="discussion">
-       <div id="take-away">
+    <article class="area">
+     <section class="topic">
+       <div class="abstract">
+       <div class="example">
+       <div class="take-away">
 */
 
 
@@ -33,26 +37,30 @@ body {
 main {
 }
 
-/* Major Divisions */
-
 /* Article ("Area") - contains elements "section" */
 
 article {
 }
 
+/* Section ("topic") - contains div#abstract, div#example, div#take-away */
 
-/* Section ("topic") - contains div#abstract, div#discussion, div#take-away */
-
-section{
+section h1 {
+  font-family: Verdana, "Liberation Sans", Geneva, sans-serif;
+  font-size: 1.125em;
+  line-height: 1.5em;
 }
 
-div#abstract {
+
+div.abstract {
 }
 
-div#discussion {
+div.example {
+  font-family: "Liberation Sans Narrow", "Arial Narrow", Arial, sans-serif;
 }
 
-div#take-away {
+div.take-away {
+  font-size: 1.125em;
+  line-height: 1.5em;
 }
 
 
@@ -60,6 +68,9 @@ div#take-away {
 header {
 }
 header h1 {
+  font-family: Verdana, "DejaVu Sans", Geneva, sans-serif;
+  font-size: 1.875em;
+  line-height: 0.625em;
 }
 header h1 a {
 }
@@ -98,14 +109,9 @@ nav li a:focus {
 
 /*article Typography: Headings*/
 article h2 {
-}
-article h3 {
-}
-article h4 {
-}
-article h5 {
-}
-article h6 {
+font-size: 1.5em;
+line-height: 2em;
+
 }
 
 /*article Typography: Paragraphs*/
@@ -123,17 +129,6 @@ article * li ul {
 article * li ul li {
 }
 
-/*article Typography: Ordered Lists*/
-article ol {
-}
-article ol li {
-}
-/*Nested*/
-article * li ol {
-}
-article * li ol li {
-}
-
 /*main Typography: Links*/
 main a {
 }
@@ -142,4 +137,6 @@ main a:visited {
 main a:hover,
 main a:focus {
 }
+
+
 
