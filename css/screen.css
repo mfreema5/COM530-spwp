@@ -22,13 +22,12 @@ body {
 }
 
 /* Element hierarchy:
-
-  <main>                    <-- "There can be only one."
-    <article class="area">
-     <section class="topic">
-       <div class="abstract">
-       <div class="example">
-       <div class="take-away">
+    <main>
+      <article id="[area]">
+        <section class="topic">
+          <div class="abstract">
+          <div class="example">
+          <div class="take-away">
 */
 
 
