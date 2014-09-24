@@ -18,6 +18,11 @@ abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 *:after {
   box-sizing: border-box;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* Body */
 
@@ -46,7 +51,6 @@ main {
 /* Article ("Area") - contains elements "section" */
 
 article {
-break-after: auto
 }
 
 /* Section - contains div.topic, div.abstract, div.example, div.take-away */
@@ -121,8 +125,11 @@ nav li a:focus {
 
 /*article Typography: Headings*/
 article h2 {
-font-size: 1.5em;
-line-height: 2em;
+  position: left;
+  font-size: 1.5em;
+  line-height: 2em;
+  padding: 3%;
+  border: 1px solid black
 }
 
 /*article Typography: Paragraphs*/
@@ -152,14 +159,15 @@ main a:focus {
 /* Responsive grid layout, using `box‐sizing:border‐box` */
 
 .row {
-  margin: 0 -10px;        /* Two-value syntax {margin: vertical horizontal} */
+  margin: 0 -40px;        /* Two-value syntax {margin: vertical horizontal} */
   margin-bottom: 0px;
+  padding: 3%;
 }
 .row:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 [class*="col-"] {
-  padding: 10px;          /*  Outer pad negated on row-level above?  */
+  padding: 40px;          /*  Outer pad negated on row-level above?  */
 }
 
 @media all and ( min-width: 600px ) {
@@ -167,10 +175,13 @@ main a:focus {
   .col-1 {
     float: left;
     width: 33%;
+    border: 1px solid black
   }
   .col-2 {
     float: left;
     width: 51%;
+    border: 1px solid black
+
   }
 }
 
