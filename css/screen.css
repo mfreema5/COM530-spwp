@@ -1,5 +1,6 @@
 /* screen.css: Screen Styles */
 
+
 /* Base Styles */
 
 /* Bold on headings, b, and strong */
@@ -70,21 +71,20 @@ main {
 
 article {
     background-color: rgb(242,250,255);    /* hsv(205,005,100) */
+    padding: 3.0%;
 }
 
 article h2 {
-  position: left;
   font-size: 1.5em;
   line-height: 1.333em;
-  padding: 1.5%;
-  margin-left: 1.5%;
 }
 
 /* Section ("focus") - contains div.topic, div.abstract, div.example, div.take-away */
 /* Typography, etc.  - layout is below  */
 
-section {
+section {                           /* Four-value syntax {item: top right bottom left} */
   background-color: rgb(217,239,255);    /* hsv(205,015,100) */
+  padding: 1.25% 1.25% 1.25% 1.25% ;
 }
 
 div.topic {
@@ -120,8 +120,7 @@ div.take-away {
 /* Responsive grid layout */
 
 .row {
-  margin: 0 3%;        /* Two-value syntax {margin: vertical horizontal} */
-  margin-bottom: 0px;
+  margin: 0 0 0 0; /* Four-value syntax {margin: top right bottom left} */
 }
 .row:last-child {
   margin-bottom: 3%;
@@ -133,26 +132,26 @@ div.take-away {
     .topic {
       float: left;
       width: 33%;
-      padding-left: 3%;
-      padding-right: 1.5%;
+      padding-left: 1.25%;
+      padding-right: 1.25%;
     }
     .example {
       float: left;
       width: 33%;
-      padding-left: 3%;
-      padding-right: 1.5%;
+      padding-left: 1.25%;
+      padding-right: 1.25%;
     }
     .abstract {
       float: left;
       width: 51%;
-      padding-left: 1.5%;
-      padding-right: 3%;
+      padding-left: 1.25%;
+      padding-right: 1.25%;
     }
     .take-away {
       float: left;
       width: 51%;
-      padding-left: 1.5%;
-      padding-right: 3%;
+      padding-left: 1.25%;
+      padding-right: 1.25%;
     }
 
     /* CSS image replacement */
