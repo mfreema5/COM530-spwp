@@ -1,5 +1,6 @@
 /* screen.css: Screen Styles */
 
+/***************************************************************************************/
 
 /* Base Styles */
 
@@ -12,24 +13,29 @@ i,em,cite { font-style: italic; }
 /* Dotted border and help cursor to abbr and acronym: */
 abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 
-/* Basic element hierarchy:
-   <html>
-     <body>
-       <header>
-       <main>
-         <article>
-           <section>
-             <div>
-       <footer>      */
+/***************************************************************************************/
+/*                                                  Element hierarchy:
+                                                      <body>
+                                                        <main>
+                                                          <article id="[area]">
+                                                            <section id="[focus]">
+                                                              <div class="topic">
+                                                              <div class="abstract">
+                                                              <div class="example">
+                                                              <div class="take-away">  */
+
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;                            /* Set for use by layout later on */
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-body {                             /* Body - all of the content - set default font here*/
+/***************************************************************************************/
+/* Typography, color, etc. - Layout is farther down. */
+
+body {                                                  /* Body - everything displayed */
   font-family:  Helvetica, "Liberation Sans Narrow", Arial, sans-serif;
   background-color: rgb(173,191,204);
 }
@@ -46,29 +52,26 @@ header p {
   font-size: 1em;
 }
 
-main {                                                     /* Main - contains content  */
+main {                                                          /* Main - the content  */
 }
 
-/* Typography, color, etc. - Layout is farther down. */
-
-                                               /* Article - contains element "section" */
-article {
+article {                                      /* Article - contains element «section» */
   background-color: rgb(195,215,230);
 }
 article h1 {
-  font-size:   1.500em;
+  font-size:   1.250em;
   line-height: 1.2;
 }
-             /* Section - contains div.topic, div.abstract, div.example, div.take-away */
-section {
-    background-color: rgb(217,239,255);
+
+section {                                           /* Section - contains divs .topic, */
+    background-color: rgb(217,239,255);             /* .abstract, .example, .take-away */
 }
 
 div.topic p {
   font-family: Verdana, "Liberation Sans", Geneva, sans-serif;
-  font-size:   1.125em;
-  line-height: 1.375;                           /* color x-offest y-offset blur-radius */
-  text-shadow: rgb(217,239,255)  0.1em  0     2px,
+  font-size:   1.000em;
+  line-height: 1.125;
+  text-shadow: rgb(217,239,255)  0.1em  0     2px,     /* color x-offset y-offset blur */
                rgb(217,239,255) -0.1em  0     2px,
                rgb(217,239,255)  0      0.1em 2px,
                rgb(217,239,255)  0     -0.1em 2px,
@@ -82,14 +85,15 @@ div.example h3 {
   line-height: 1.375;
 }
 div.abstract p {
-  font-size:   0.8125em;
+  font-size:   0.875em;
   line-height: 1.250;
+  margin-bottom:  1.125em;
 }
 div.take-away p {
   font-size:   1.000em;
   line-height: 1.500;
-  text-align:  right;                           /* color x-offest y-offset blur-radius */
-  text-shadow: rgb(217,239,255)  0.1em  0     2px,
+  text-align:  right;
+  text-shadow: rgb(217,239,255)  0.1em  0     2px,     /* color x-offset y-offset blur */
                rgb(217,239,255) -0.1em  0     2px,
                rgb(217,239,255)  0      0.1em 2px,
                rgb(217,239,255)  0     -0.1em 2px,
@@ -98,23 +102,23 @@ div.take-away p {
                rgb(217,239,255)  0.1em -0.1em 2px,
                rgb(217,239,255) -0.1em -0.1em 2px;
 }
-                                    /* Four-value syntax {item: top right bottom left} */
-                                    /* Two-value syntax  {item:  vertical  horizontal} */
-/* * * * * Layout * * * * */
-                                                  /* Element hierarchy:
-                                                       <body>
-                                                         <main>
-                                                           <article id="[area]">
-                                                             <section id="[focus]">
-                                                               <div class="topic">
-                                                               <div class="abstract">
-                                                               <div class="example">
-                                                               <div class="take-away"> */
 
-      /* INSERT:  @media all and ( min-width: 1024px ) { }
-      /* CHANGE:  @media all and ( min-width: 600px ) and ( max-width: 1023px )  */
+/***************************************************************************************/
+/*        Layout                          Element hierarchy:
+/* with responsive boxen                      <body>
+/*                                               <main>
+/*                                                 <article id="[area]">
+/*                                                   <section id="[focus]">
+/*                                                     <div class="topic">
+/*                                                     <div class="abstract">
+/*                                                     <div class="example">
+/*                                                     <div class="take-away">
+/***************************************************************************************/
 
-@media all and ( min-width: 600px ) {                              /* Responsive boxen */
+@media all and ( min-width: 1024px ) {
+
+  .o600 { display: inline; }
+  .u600 { display: none; }
 
   body {
     padding: 6.25vw 6.25vw;
@@ -124,6 +128,65 @@ div.take-away p {
     margin: 3.125vw 3.125vw;
   }
   article {
+   font-size: 1.250em;                        /* The base "em" is inherited from here. */
+   display: block;
+   position: relative;
+   margin:  1.375vw;                                          /* vw = "viewport width" */
+   padding: 1.375vw;                                                    /* 0.375 = 3/8 */
+  }
+
+ section {
+    display:   block;
+    position:  relative; left: 1.125pw; right: auto;
+    width:     96.625%;
+    padding:   1.375vw;                                                /* 1.375 = 11/8 */
+    margin:    0 1.375vw 0.875vw 1.375vw;                              /* 0.875 =  7/8 */
+  }                                 /* Four-value syntax {item: top right bottom left} */
+
+  div.topic, div.example, div.abstract, div.take-away {
+    display: inline-block;
+    position: relative;
+    padding: 1.875vw 1.250vw;
+    /* border: 1px solid black; */
+  }
+
+  div.topic {
+    vertical-align: top;
+    width: 98%;
+    z-index: 2;                               /* On top of example graphic, if needed. */
+  }
+
+  div.example {
+    float: right;
+    width: 1%;
+    padding: 1.875vw 0 0 0;                      /* Pics should have their own padding.*/
+  }
+
+  div.abstract {
+    vertical-align: bottom;
+    text-align: baseline;
+    padding-top: 2em;
+    width: 32%;
+  }
+
+  div.take-away {
+    width: 65%;
+    z-index: 2;                               /* On top of example graphic, if needed. */
+  }
+
+}
+
+/***************************************************************************************/
+                                    /* Four-value syntax {item: top right bottom left} */
+                                    /* Two-value syntax  {item:  vertical  horizontal} */
+
+@media all and ( min-width: 600px ) and ( max-width: 1023px ) {
+
+  .o600 { display: none; }
+  .u600 { display: inline; }
+
+  article {
+   font-size: 1.000em;                        /* The base "em" is inherited from here. */
    display: block;
    position: relative;
    margin:  1.375vw;                                          /* vw = "viewport width" */
@@ -148,7 +211,6 @@ div.take-away p {
   div.topic {
     vertical-align: top;
     width: 98%;
-    /* min-height: 76px;                      /* Pixels because it's related to an image. */
     z-index: 2;                               /* On top of example graphic, if needed. */
   }
 
@@ -156,20 +218,21 @@ div.take-away p {
     float: right;
     width: 1%;
     padding: 1.875vw 0 0 0;                      /* Pics should have their own padding.*/
-
   }
+
   div.abstract {
     vertical-align: bottom;
     text-align: baseline;
     padding-top: 2em;
     width: 32%;
   }
+
   div.take-away {
     width: 65%;
     z-index: 2;                               /* On top of example graphic, if needed. */
   }
 
-                                    /* CSS image replacement at > 600px and < 1024px ) */
+                                                   /* CSS image replacement at > 600px */
   #example-tcid {
     width:  10px;
 	  height: 10px;
@@ -225,9 +288,15 @@ div.take-away p {
 	}
 }
 
+/***************************************************************************************/
+
 @media all and ( max-width: 599px ) {
 
+  .o600 { display: none; }
+  .u600 { display: inline; }
+
   article {
+    font-size: 1.125em;                       /* The base "em" is inherited from here. */
     display: block;
     position: relative;
     padding: 0.625em 0;
@@ -236,6 +305,7 @@ div.take-away p {
   article h1 {
     margin-left: 1%;
   }
+
   section {
     display: inline-block;
     position: relative;
@@ -253,9 +323,11 @@ div.take-away p {
   div.example {
     float: right;
   }
+
   div.abstract {
     clear: right;
   }
+
   div.take-away p {
     padding-top:  0.375em;
     margin-left:  4.250%;
@@ -292,8 +364,9 @@ div.take-away p {
 	}
 }
 
-
+/***************************************************************************************/
 /* Footer */
+
 footer {
 }
 footer p.credits {
