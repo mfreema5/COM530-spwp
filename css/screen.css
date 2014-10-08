@@ -128,7 +128,7 @@ div.take-away p {
     margin: 3.125vw 3.125vw;
   }
   article {
-   font-size: 1.250em;                        /* The base "em" is inherited from here. */
+   font-size: 1.125em;                        /* The base "em" is inherited from here. */
    display: block;
    position: relative;
    margin:  1.375vw;                                          /* vw = "viewport width" */
@@ -173,6 +173,36 @@ div.take-away p {
     width: 65%;
     z-index: 2;                               /* On top of example graphic, if needed. */
   }
+                                                  /* CSS image replacement at > 1024px */
+  div.example h3 {
+    width:  10px;
+	  height: 10px;
+  }
+
+  #example-tcid::before {
+    content: " ";
+    margin: 1.875em 0 0 -390px;                         /* extra top margin because    */
+    position: absolute; top:1.875; right: 0;            /* longer topics at this width */
+    width:  400px;
+    height: 400px;
+    z-index: 1;
+    background-image: url("gfx/P10/p10-400.png");
+    background-repeat: no-repeat;
+  }
+  #example-psyc380::before {
+    content: " ";
+    margin: 1.875em 0 0 -390px;
+    position: absolute; top:1.875; right: 0;
+    width:  400px;
+    height: 400px;
+    z-index: 1;
+    background-image: url("gfx/PSED/rsa-400.png");
+    background-repeat: no-repeat;
+  }
+
+  div.example span {
+    display: none;
+	}
 
 }
 
@@ -232,46 +262,21 @@ div.take-away p {
     z-index: 2;                               /* On top of example graphic, if needed. */
   }
 
-                                                   /* CSS image replacement at > 600px */
-  #example-tcid {
+                                      /* CSS image replacement at > 600px and < 1024px */
+  div.example h3 {
     width:  10px;
 	  height: 10px;
   }
+
   #example-tcid::before {
     content: " ";
     margin: 0 0 0 -190px;
     position: absolute; top:0; right: 0;
     width:  200px;
     height: 200px;
-    z-index: 1;                                                    /* Behind take-away */
-    background-image: url("gfx/P380/scatterplot-200.png");
+    z-index: 1;
+    background-image: url("gfx/P10/p10-200.png");
     background-repeat: no-repeat;
-  }
-  #example-tcid span {
-    display: none;
-	}
-
-  #example-psedii {
-    width:  10px;
-	  height: 10px;
-  }
-  #example-psedii::before {
-    content: " ";
-    margin: 0 0 0 -190px;
-    position: absolute; top:0; right: 0;
-    width:  200px;
-    height: 200px;
-    z-index: 1;                                                    /* Behind take-away */
-    background-image: url("gfx/PSED/rsa-200.png");
-    background-repeat: no-repeat;
-  }
-  #example-psedii span {
-    display: none;
-	}
-
-  #example-psyc380 {
-    width:  10px;
-	  height: 10px;
   }
   #example-psyc380::before {
     content: " ";
@@ -279,11 +284,12 @@ div.take-away p {
     position: absolute; top:0; right: 0;
     width:  200px;
     height: 200px;
-    z-index: 1;                                                    /* Behind take-away */
-    background-image: url("gfx/P380/scatterplot-200.png");
+    z-index: 1;
+    background-image: url("gfx/PSED/rsa-200.png");
     background-repeat: no-repeat;
   }
-  #example-psyc380 span {
+
+  div.example span {
     display: none;
 	}
 }
@@ -335,31 +341,25 @@ div.take-away p {
     line-height:  1.2;
   }
                                                   /* CSS image replacement at < 599px  */
+    div.example h3 {
+    width:  10px;
+	  height: 10px;
+  }
+
   #example-tcid {
     width:  100px;
 	  height: 100px;
-	  background-image: url("gfx/P380/scatterplot-100.png");
+	  background-image: url("gfx/P10/p10-100.png");
     background-repeat: no-repeat;
   }
-  #example-tcid span {
-    display: none;
-	}
-  #example-psedii {
-    width: 100px;
-	  height: 90px;
-	  background-image: url("gfx/PSED/rsa-100.png");
-    background-repeat: no-repeat;
-  }
-  #example-psedii span {
-    display: none;
-	}
   #example-psyc380 {
     width:  100px;
 	  height: 100px;
-	  background-image: url("gfx/P380/scatterplot-100.png");
+	  background-image: url("gfx/PSED/rsa-100.png");
     background-repeat: no-repeat;
   }
-  #example-psyc380 span {
+
+  div.example span {
     display: none;
 	}
 }
