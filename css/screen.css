@@ -199,6 +199,36 @@ div.take-away p {
     background-image: url("gfx/PSED/rsa-400.png");
     background-repeat: no-repeat;
   }
+  #example-ux::before {
+    content: " ";
+    margin: 1.875em 0 0 -390px;
+    position: absolute; top:1.875; right: 0;
+    width:  400px;
+    height: 400px;
+    z-index: 1;
+    background-image: url("gfx/SortCPS/sortcps-400.png");
+    background-repeat: no-repeat;
+  }
+  #example-iso17025::before {
+    content: " ";
+    margin: 1.875em 0 0 -390px;
+    position: absolute; top:1.875; right: 0;
+    width:  400px;
+    height: 400px;
+    z-index: 1;
+    background-image: url("gfx/LIS-96.jpg");
+    background-repeat: no-repeat;
+  }
+  #example-stands-regs::before {
+    content: " ";
+    margin: 1.875em 0 0 -390px;
+    position: absolute; top:1.875; right: 0;
+    width:  400px;
+    height: 400px;
+    z-index: 1;
+    background-image: url("gfx/LIS-96.jpg");
+    background-repeat: no-repeat;
+  }
 
   div.example span {
     display: none;
@@ -278,7 +308,6 @@ div.take-away p {
     background-image: url("gfx/P10/p10-300.png");
     background-repeat: no-repeat;
   }
-
   #example-psyc380::before {
     content: " ";
     margin: 0 0 0 -290px;
@@ -287,6 +316,36 @@ div.take-away p {
     height: 300px;
     z-index: 1;
     background-image: url("gfx/PSED/rsa-300.png");
+    background-repeat: no-repeat;
+  }
+  #example-ux::before {
+    content: " ";
+    margin: 1.875em 0 0 -290px;
+    position: absolute; top:0; right: 0;
+    width:  300px;
+    height: 300px;
+    z-index: 1;
+    background-image: url("gfx/SortCPS/sortcps-crop-300.png");
+    background-repeat: no-repeat;
+  }
+  #example-iso17025::before {
+    content: " ";
+    margin: 1.875em 0 0 -290px;
+    position: absolute; top:0; right: 0;
+    width:  300px;
+    height: 300px;
+    z-index: 1;
+    background-image: url("gfx/LIS-96.jpg");
+    background-repeat: no-repeat;
+  }
+  #example-stands-regs::before {
+    content: " ";
+    margin: 1.875em 0 0 -290px;
+    position: absolute; top:0; right: 0;
+    width:  300px;
+    height: 300px;
+    z-index: 1;
+    background-image: url("gfx/LIS-96.jpg");
     background-repeat: no-repeat;
   }
 
@@ -356,6 +415,24 @@ div.take-away p {
     width:  100px;
 	  height: 100px;
 	  background-image: url("gfx/PSED/rsa-100.png");
+    background-repeat: no-repeat;
+  }
+  #example-ux {
+    width:  100px;
+	  height: 100px;
+	  background-image: url("gfx/SortCPS/sortcps-crop-100.png");
+    background-repeat: no-repeat;
+  }
+  #example-iso17025 {
+    width:  100px;
+	  height: 100px;
+	  background-image: url("gfx/LIS-96.jpg");
+    background-repeat: no-repeat;
+  }
+  #example-stands-regs {
+    width:  100px;
+	  height: 100px;
+	  background-image: url("gfx/LIS-96.jpg");
     background-repeat: no-repeat;
   }
 
