@@ -117,8 +117,8 @@ div.take-away p {
 
 @media all and ( min-width: 1024px ) {
 
-  .o600 { display: inline; }
-  .u600 { display: none; }
+  .o1024 { display: inline; }
+  .u1024 { display: none; }
 
   body {
     padding: 6.25vw 6.25vw;
@@ -182,8 +182,8 @@ div.take-away p {
 
 @media all and ( min-width: 600px ) and ( max-width: 1023px ) {
 
-  .o600 { display: none; }
-  .u600 { display: inline; }
+  .o1024 { display: none; }
+  .u1024 { display: inline; }
 
   article {
    font-size: 1.000em;                        /* The base "em" is inherited from here. */
@@ -292,8 +292,8 @@ div.take-away p {
 
 @media all and ( max-width: 599px ) {
 
-  .o600 { display: none; }
-  .u600 { display: inline; }
+  .o1024 { display: none; }
+  .u1024 { display: inline; }
 
   article {
     font-size: 1.125em;                       /* The base "em" is inherited from here. */
