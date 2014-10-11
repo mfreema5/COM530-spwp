@@ -201,11 +201,11 @@ div.take-away {
   }
 
   div.abstract {
-    width: 65%;
+    width: 62%;
   }
 
   div.take-away {
-    width: 32%;
+    width: 35%;
   }
                                                       /* images at > 50 em and < 64 em */
   section#tcid        { background-image: url("gfx/P10/p10-300.png"); }
@@ -253,11 +253,11 @@ div.take-away {
   }
 
   div.abstract {
-    width: 65%;
+    width: 62%;
   }
 
   div.take-away {
-    width: 32%;
+    width: 35%;
   }
                                                                   /* images at > 64 em */
   section#tcid        { background-image: url("gfx/P10/p10-400.png"); }
