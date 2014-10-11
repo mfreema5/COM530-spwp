@@ -41,7 +41,7 @@ header {                                                  /* Header - top of pag
   margin-left: 1%;
 }
 header h1 {
-  font-size: 1.875em;
+  font-size:   1.875em;
   line-height: 1.333em;
 }
 header p {
@@ -108,8 +108,7 @@ div.take-away p {
 /*                                                     <div class="take-away">         */
 /***************************************************************************************/
 
-                                                                    /* Default layouts */
-article {
+article {                                                           /* Default layouts */
   display: block;
   position: relative;
 }
@@ -124,22 +123,19 @@ div {
   position: relative;
   margin: 0 0 0 0;
 }
-
 div.topic {
   vertical-align: top;
 }
-
 div.abstract {
   vertical-align: bottom;
 }
-
 div.take-away {
   vertical-align: bottom;
 }
 
 /***************************************************************************************/
-                                                                    /* screen < 800 px */
-@media all and ( max-width: 799px ) {
+                                                                    /* screen < 50 em */
+@media all and ( max-width: 50em ) {
 
   .o1024 { display: none; }
   .u1024 { display: inline; }
@@ -172,8 +168,8 @@ div.take-away {
 }
 
 /***************************************************************************************/
-                                                            /* 800px < screen < 1024px */
-@media all and ( min-width: 800px ) and ( max-width: 1023px ) {
+                                                               /* 50em < screen < 64em */
+@media all and ( min-width: 50em ) and ( max-width: 64em ) {
 
   .o1024 { display: none; }
   .u1024 { display: inline; }
@@ -211,7 +207,7 @@ div.take-away {
   div.take-away {
     width: 32%;
   }
-                                                     /* images at > 800px and < 1024px */
+                                                      /* images at > 50 em and < 64 em */
   section#tcid        { background-image: url("gfx/P10/p10-300.png"); }
   section#psyc380     { background-image: url("gfx/PSED/rsa-300.png"); }
   section#ux          { background-image: url("gfx/SortCPS/sortcps-crop-300.png"); }
@@ -221,7 +217,7 @@ div.take-away {
 
 /***************************************************************************************/
 
-@media all and ( min-width: 1024px ) {                              /* 1024px < screen */
+@media all and ( min-width: 64em ) {                                 /* 64 em < screen */
 
   .o1024 { display: inline; }
   .u1024 { display: none; }
@@ -263,7 +259,7 @@ div.take-away {
   div.take-away {
     width: 32%;
   }
-                                                                 /* images at > 1024px */
+                                                                  /* images at > 64 em */
   section#tcid        { background-image: url("gfx/P10/p10-400.png"); }
   section#psyc380     { background-image: url("gfx/PSED/rsa-400.png"); }
   section#ux          { background-image: url("gfx/SortCPS/sortcps-400.png"); }
@@ -273,24 +269,11 @@ div.take-away {
 
 /***************************************************************************************/
 
+                                                         /*    Reference for colors    */
+                                                         /*     20% - rgb(43,48,51)    */
+                                                         /*     40% - rgb(87,96,102)   */
+                                                         /*     60% - rgb(130,143,153) */
+                                                         /*     80% - rgb(173,191,204) */
+                                                         /*     90% - rgb(195,215,230) */
+                                                         /*    100% - rgb(217,239,255) */
 
-/* Footer */
-
-footer {
-}
-footer p.credits {
-}
-footer ul.validators {
-}
-footer ul.validators li {
-}
-
-
-/*
-     20% - rgb(43,48,51)
-     40% - rgb(87,96,102)
-     60% - rgb(130,143,153)
-     80% - rgb(173,191,204)
-     90% - rgb(195,215,230)
-    100% - rgb(217,239,255)
-*/
